@@ -10,10 +10,16 @@ background: #F5F5F5; -3
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+
+    /*  Grid  */
+      --items: 9;
+      --indent: 30px;
 }
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -48,7 +54,7 @@ body {
   max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .section {
@@ -201,6 +207,7 @@ body {
 .button {
   display: inline-block;
   border-radius: 4px;
+  border: transparent;
   padding: 10px 32px;
   min-width: 216px;
   background-color: var(--accent-color);
@@ -213,10 +220,13 @@ body {
 }
 
 .button-filter {
+  padding: 6px 22px;
   color: var(--title-text-color);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.62;
+  border-radius: 4px;
+  border: transparent;
 }
 
 .button-filter:hover,
@@ -226,6 +236,7 @@ body {
 }
 
 .button-filter.current {
+  padding: 6px 25px;
   background-color: var(--accent-color);
   color: #fff;
 }
@@ -265,6 +276,10 @@ body {
 }
 
 /* Section Works */
+.section.works {
+  padding-top: 0px;
+}
+
 .works.list {
   display: flex;
 }
@@ -338,12 +353,11 @@ body {
 
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 
 .logo-footer {
-  padding-top: 60px;
   margin-bottom: 20px;
-  /* width: 145px; */
 }
 
 .address {
@@ -357,7 +371,6 @@ body {
 
 .address.list .item:last-child {
   margin-bottom: 0;
-  padding-bottom: 60px;
 }
 
 .address.list .link {
@@ -394,6 +407,23 @@ body {
 }
 
 /* Portfolio */
+.cards-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+
+
+.list.filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+    
+
+}
 
 .list-pages .title {
   color: var(--title-text-color);
@@ -411,4 +441,10 @@ body {
 
 .list-pages .link {
   text-decoration: none;
+}
+
+.border {
+  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
 }
